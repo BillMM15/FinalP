@@ -5,7 +5,7 @@
 
 Vehiculo::Vehiculo() //se iniciliza nuestro metodo constructor
 {
-	this->connectionString = "datasource=localhost; username=root; password=""; database=heacker;"; //iniciamos nuestra cadena de conexion a la base de datos
+	this->connectionString = "datasource=localhost; username=root; password='123'; database = heacker; "; //iniciamos nuestra cadena de conexion a la base de datos
 	this->Driver = gcnew MySqlConnection(this->connectionString);
 }
 
@@ -50,7 +50,7 @@ void Vehiculo::update(String^ n, String^ a, String^ s, String^ m, String^ ref)
 {
 	String^ sql = "update civil set Nombre = '" + n + "', aniofabricacion = '" + a + "', Serie = '" + s + "', Marca = '" + m + "'where idvehiculo = '" + ref + "'";
 	MySqlCommand^ cursor = gcnew MySqlCommand(sql, this->Driver);
-	try																//este es mi metodo modificar 
+	try																//este es nuestro metodo modificar 
 	{
 		using namespace System::Windows::Forms;
 		using namespace System::Data;
@@ -66,10 +66,10 @@ void Vehiculo::update(String^ n, String^ a, String^ s, String^ m, String^ ref)
 	}
 }
 
-void Vehiculo::remove(String^ idvehiculo) {
+void Vehiculo::remove(String^ idvehiculo) { //este es mi metodo eliminar 
 	String^ sql = "delete from civil where idVehiculo = " + idvehiculo;
 	MySqlCommand^ cursor = gcnew MySqlCommand(sql, this->Driver);
-	try //este es mi metodo eliminar 
+	try 
 	{
 		using namespace System::Windows::Forms;
 		using namespace System::Data;

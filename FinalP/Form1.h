@@ -36,7 +36,7 @@ namespace CppCLRWinFormsProject {
 				delete components;
 			}
 		}
-	private: String^ connectionString = "datasource=localhost; username=root; password=""; database=heacker;";
+	private: String^ connectionString = "datasource=localhost; username=root; password=123; database=heacker;";
 	private: MySqlConnection^ conn = gcnew MySqlConnection(connectionString);
 	private: System::Windows::Forms::Button^ btn_ingresar;
 	private: System::Windows::Forms::TextBox^ txt_usuario;

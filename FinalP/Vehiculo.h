@@ -10,11 +10,12 @@ private:
 	MySqlConnection^ Driver;
 public:
 	Vehiculo();
-	DataTable^ getData();	//aqui debemos de modificar las indicaciones especificas del ing
+	DataTable^ getData();	//
 	void AbrirConexion();	//metodos
 	void CerrarConexion();
 	void create(String^, String^, String^, String^);
-	void update(String^, String^ , String^, String^, String^);
+	void update(String^, String^, String^, String^, String^);
 	void remove(String^);
+
 };
 
